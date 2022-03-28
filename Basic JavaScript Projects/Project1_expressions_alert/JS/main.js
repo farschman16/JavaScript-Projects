@@ -12,3 +12,4 @@ document.write(D);
 document.write(3+3); //expression within a statement
 var Doctors = "Modern Doctors", nine = "Christopher Eccleston", ten = "David Tennant", eleven = "Matt Smith", twelve = "Peter Capaldi", thirteen = "Jodie Whittaker";
 document.write(eleven.fontcolor('blue')); //this line utilized the deprecated "fontcolor" attribute
+
