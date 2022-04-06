@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="./JS/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="./CSS/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Banff images
+        </title>
+    </head>
+
+    <body>
+        <p>How many seconds would you like to set your alarm for?</p>
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Click here</button>
+        <p id="timer"></p><br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="./images/banff1.jpg" alt="Banff Image" style="width:100%">
+                <div class="text">Banff National Park</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="./images/banff2.jpg" alt="Fairmont Springs Hote" style="width:100%">
+                <div class="text">Fairmont Banff Springs Hotel</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="./images/banff3.jpg" alt="Banff Image of mountains" style="width:100%">
+                <div class="text">Banff National Park Hiking Trails</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="./images/banff4.jpg" alt="Kayaker in Banff lake" style="width:100%">
+                <div class="text">Kayaking the clear waters of Banff</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+    </body>
+</html>
