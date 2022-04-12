@@ -58,6 +58,11 @@ function Handle_Operator(Next_Operator) { //section for operators
         Calculator.operator = null;
     }
 
+    function Update_Display() {
+        const display = document.querySelector('.calculator-screen');
+        display.value = Calculator.Display_Value;
+    }
+
     Update_Display(); //monitors button clicks
     const keys = document.querySelector('.calculator-keys');
     keys.addEventListener('click', (event) => {
