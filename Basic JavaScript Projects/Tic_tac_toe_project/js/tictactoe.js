@@ -115,7 +115,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) { //utilize html canvas
     disableClick(); //disables click for sound to play
     audio('./media/winGame.mp3'); //plays win sound
     animateLineDrawing(); //animation loop call
-    setTimeout(function () { clear(); resetGame(); }, 1000); //waits 1 second, then clears canvas, resetting game
+    setTimeout(function () { clear(); resetGame(); }, 5000); //waits 1 second, then clears canvas, resetting game
 }
 
 function resetGame() { //resets game in event of tie or win
