@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--tells the browser to reference jQuery-->
+    </head>
+
+    <script>
+        $(document).ready(function(){//once the document loads, perform function
+            $("html").append(//will add(append) the following to the full html file
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#2").css({"color":"red"}); //takes element with id 1 (the paragraph 1 element) and adds css style to it
+            $("#3").click(function() {//when you click the id 3 element (paragraph 3)...
+                $('h1').hide();//hide the h1 element
+            });
+            $("#1").click(function(){//when you click the #1 element...
+                console.log("You clicked paragraph 1");//console will display the specified string
+            });
+            $("p").fadeOut( 4500 );//takes all p elements, and fades them out in a specified amount of time
+        });
+
+    </script>
+
+</html>
