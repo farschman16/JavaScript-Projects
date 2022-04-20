@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="react.js"></script>
+        <script src="react-dom.js"></script>
+    </head>
+
+    <body>
+        <div id="My_React_Code"></div> <!--This section is React code that creates a timer that counts upward-->
+        <script>
+            var Counter = React.createClass({ //React.createClass creates a component class
+                render: function() {
+                    var time_Passed = Math.round(this.props.time_Passed / 100);
+                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' ); //? checks whether or not the condition is true. Shorthand for "else." % finds the remainder
+                    var text = 'My React code started running ' + seconds_Passed + ' seconds ago!';
+                    return React.DOM.p(null, text);
+                }
+            });
+
+            var counter_Factory = React.createFactory(Counter); //React.createFactory is a funtion that generates a factory(object that creates other objects)
+
+            var start_Counting = new Date().getTime();
+            setInterval(function() { //setInterval() is a method that evaluates an expression at specified intervals (milliseconds)
+                ReactDOM.render( //ReactDOM.render is used to render a React component or components
+                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+                    document.getElementById('My_React_Code')
+                );
+            }, 50);
+        </script>
+
+
+    </body>
+</html>

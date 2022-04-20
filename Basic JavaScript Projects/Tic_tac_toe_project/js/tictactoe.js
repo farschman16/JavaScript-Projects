@@ -125,3 +125,11 @@ function resetGame() { //resets game in event of tie or win
     }
     selectedSquares = []; //resets array
 }
+
+function openForm() { //function for the sticky menu button on bottom
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }

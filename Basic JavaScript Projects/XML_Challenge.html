@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+    </head>
+    <body>
+        <p id="XML_Example"></p>
+        <script>
+            var XML_Parser, XML_Document;
+
+            //creates a text string
+            var Dish = "<dish>" +
+                "<main>Roasted Salmon</main>" +
+                "<side1>Red Skin Potatoes</side1>" +
+                "<side2>Mixed Veggies</side2>" +
+                "<salad>Chopped Romaine with Balsamic</salad>" +
+                "</dish>";
+            
+            //creates an XML DOM parser
+            XML_Parser = new DOMParser();
+
+            //creates a new XML DOM object using the text string
+            XML_Document = XML_Parser.parseFromString(Dish,"text/xml");
+
+            document.getElementById("XML_Example").innerHTML = 
+            XML_Document.getElementsByTagName("side2")[0].childNodes[0].nodeValue;
+
+        </script>
+    </body>
+</html>
