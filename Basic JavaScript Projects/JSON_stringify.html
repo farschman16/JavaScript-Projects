@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+
+    <body>
+        <p id="myDog"></p>
+        <p id="myDog2"></p>
+        <p id="myCat"></p>
+
+        <script>
+            var dog = {name: "Meatloaf", breed: "Mutt", color:"Brindle"};
+            var JSONstring = JSON.stringify(dog);
+            document.getElementById("myDog").innerHTML = JSONstring;
+
+            var dog2 = '{"name": "Shelley", "breed": "Super Mutt", "color": "Black and White"}';
+            var JSONstring = JSON.parse(dog2);
+            document.getElementById("myDog2").innerHTML = JSONstring.name + " the " + JSONstring.breed;
+
+            localStorage.setItem("catName", "Benny");
+            document.getElementById("myCat").innerHTML = localStorage.getItem("catName");
+        </script>
+    </body>
+</html>
